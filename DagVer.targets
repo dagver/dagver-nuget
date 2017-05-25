@@ -8,7 +8,9 @@
       </Code>  
     </Task>  
   </UsingTask>
-  <Hello />
+  <Target Name="GetVersion" BeforeTargets="Build">
+    <Hello />
+  </Target>
   <PropertyGroup>
     <Version>0.0.1</Version>
   </PropertyGroup>
