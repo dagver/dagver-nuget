@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DagVer</id>
+        <version>0.0.0</version>
+        <description>DagVer</description>
+        <authors>Sergey Shandar</authors>
+    </metadata>
+    <files>
+        <file src="DagVer.targets" target="build\" />
+    </files>
+</package>
