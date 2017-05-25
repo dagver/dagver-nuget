@@ -9,7 +9,9 @@
     </Task>
   </UsingTask>
   <Target Name="GetVersion" BeforeTargets="Build">
-    <Version>0.0.2</Version>
+    <PropertyGroup>
+      <Version>0.0.3</Version>
+    </PropertyGroup>
   </Target>
   <!--
   <PropertyGroup>
