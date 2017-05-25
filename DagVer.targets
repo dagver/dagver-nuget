@@ -4,14 +4,16 @@
     <ParameterGroup />  
     <Task>  
       <Code Type="Fragment" Language="cs">  
-        Log.LogMessage("Hello, world!", MessageImportance.High);  
-      </Code>  
-    </Task>  
+        Log.LogMessage("Hello, world!", MessageImportance.High);
+      </Code>
+    </Task>
   </UsingTask>
   <Target Name="GetVersion" BeforeTargets="Build">
-    <Hello />
+    <Version>0.0.2</Version>
   </Target>
+  <!--
   <PropertyGroup>
     <Version>0.0.1</Version>
   </PropertyGroup>
+  -->
 </Project>
