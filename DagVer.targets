@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="Hello" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >  
+    <ParameterGroup />  
+    <Task>  
+      <Code Type="Fragment" Language="cs">  
+        Log.LogMessage("Hello, world!", MessageImportance.High);  
+      </Code>  
+    </Task>  
+  </UsingTask>
+  <Hello />
   <PropertyGroup>
-   <Version>0.0.1</Version>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 </Project>
