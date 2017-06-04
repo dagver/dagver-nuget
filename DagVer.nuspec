@@ -8,6 +8,7 @@
     </metadata>
     <files>
         <file src="program/bin/Debug/netcoreapp1.1/program.dll" target="tools\" />
+        <file src="program/bin/Debug/netcoreapp1.1/program.runtimeconfig.json" target="tools\" />
         <file src="DagVer.targets" target="build\" />
     </files>
 </package>
