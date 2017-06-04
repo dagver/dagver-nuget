@@ -1,4 +1,5 @@
 # dagver-nuget
+
 Versioning for Git Commit DAG (Directed acyclic graph).
 
 It works for C# projects on Windows and Linux.

@@ -5,6 +5,11 @@
         <version>0.0.0</version>
         <description>DagVer</description>
         <authors>Sergey Shandar</authors>
+        <licenseUrl>https://github.com/sergey-shandar/dagver-nuget/blob/master/LICENSE</licenseUrl>
+        <developmentDependency>true</developmentDependency>
+        <title>Versioning for C# projects</title>        
+        <summary>Versioning for C# projects using Git Commit DAG (Directed acyclic graph).</summary>
+        <projectUrl>https://github.com/sergey-shandar/dagver-nuget</projectUrl>
     </metadata>
     <files>
         <file src="program/bin/Debug/netcoreapp1.1/program.dll" target="tools\" />
