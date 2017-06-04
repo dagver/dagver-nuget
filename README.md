@@ -13,7 +13,7 @@ Current version formats:
 
 where
 
-- `{Major}` is a major part of user's defined version number.
+- `{Major}` is a major part of a user's defined version number.
 - `{MergeMax}` is a number of mergers in a Git revision path which contains the maximum number of merges.
 - `{Local}` is a number of commits from the last merge.
 
