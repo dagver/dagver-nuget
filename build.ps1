@@ -9,4 +9,6 @@ $version = if ($env:APPVEYOR_BUILD_NUMBER) {
     "0-unknown"
 }
 
+dotnet build program/
+
 .\nuget.exe pack DagVer.nuspec -Version $version
