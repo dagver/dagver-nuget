@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 
 namespace program
@@ -45,15 +46,16 @@ namespace program
             foreach (var rev in Reversed(revList))
             {
                 var commit = rev.Split(' ');
-                switch(commit.Length)
+                var c = commit[0];
+                switch (commit.Length)
                 {
                     case 1:
-                        version = new Version(0, 0, 0);
+                        version = new Version(0, 0, 0, c);
                         break;
                     case 2:
                         var v = map[commit[1]];
                         version = new Version(
-                            v.Height + 1, v.Merge, v.Local + 1);
+                            v.Height + 1, v.Merge, v.Local + 1, c);
                         break;
                     default:
                         int h = 0;
@@ -64,10 +66,10 @@ namespace program
                             h = Math.Max(h, v.Height);
                             m = Math.Max(m, v.Merge);
                         }
-                        version = new Version(h + 1, m + 1, 0);
+                        version = new Version(h + 1, m + 1, 0, c);
                         break;
                 }
-                map[commit[0]] = version;
+                map[c] = version;
             }
 
             return version;
@@ -79,21 +81,28 @@ namespace program
             public int Merge { get; }
             public int Local { get; }
 
-            public Version(int height, int merge, int local)
+            public string Commit { get; }
+
+            public int Commit16
+                => int.Parse(Commit.Substring(0, 4), NumberStyles.HexNumber);
+
+            public Version(int height, int merge, int local, string commit)
             {
                 Height = height;
                 Merge = merge;
                 Local = local;
+                Commit = commit;
             }
 
             public override string ToString()
-                => $"0.{Height}.{Merge}.{Local}";
+                => $"{Height}.{Merge}.{Local}.{Commit16}";
         }
 
         static void Main(string[] args)
         {
-            var version = GetVersion();
-            Console.WriteLine(version);
+            var major = args.Length > 1 ? args[1].Split('.')[0] : "0";
+            var v = GetVersion();
+            Console.WriteLine($"{major}.{v.Merge}.{v.Local}.{v.Commit16}");
         }
     }
 }
