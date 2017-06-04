@@ -6,7 +6,7 @@
     </Exec>
     <PropertyGroup>
       <PackageVersion>$(Version)</PackageVersion>
-      <FileVersion>$(Version)</PackageVersion>
+      <FileVersion>$(Version)</FileVersion>
       <AssemblyVersion>$(Version.Split('.')[0]).0.0.0</AssemblyVersion>
     </PropertyGroup>
   </Target>
