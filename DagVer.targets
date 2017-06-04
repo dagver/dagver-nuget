@@ -11,6 +11,7 @@
   </UsingTask>
   -->
   <Target Name="GetVersion" BeforeTargets="BeforeBuild">
+    <Exec Command="git" />
     <PropertyGroup>
       <Version>0.0.4</Version>
       <PackageVersion>0.0.4</PackageVersion>
