@@ -8,14 +8,15 @@ It works for C# projects on Windows and Linux.
 
 Current version formats:
 
-- `PackageSersion` = `FileVersion` = `{Major}.{MergeMax}.{Local}`
+- `PackageSersion` = `FileVersion` = `{Major}.{Minor}.{Height}.{Commit16}`
 - `AssemblyVersion` = `{Major}.0.0.0`
 
 where
 
 - `{Major}` is a major part of a user's defined version number.
-- `{MergeMax}` is a number of mergers in a Git revision path which contains the maximum number of merges.
-- `{Local}` is a number of commits from the last merge.
+- `{Major}` is a minor part of a user's defined version number.
+- `{Height}` is a number of commits in the longest path.
+- `{Commit16}` is a first 16 bits of a commit id.
 
 See also [DagVer for Node.js](https://github.com/sergey-shandar/dagver) and [GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning).
 

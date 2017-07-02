@@ -98,11 +98,18 @@ namespace program
                 => $"{Height}.{Merge}.{Local}.{Commit16}";
         }
 
+        static string GetMajorMinor(string[] version)
+            => version.Length == 0
+            ? "0.0"
+            : version.Length == 1
+            ? version[0] + ".0"
+            : version[0] + "." + version[1];
+
         static void Main(string[] args)
         {
-            var major = args.Length > 1 ? args[1].Split('.')[0] : "0";
+            var majorMinor = GetMajorMinor(args.Length > 1 ? args[1].Split('.') : new string[0]);
             var v = GetVersion();
-            Console.WriteLine($"{major}.{v.Merge}.{v.Local}.{v.Commit16}");
+            Console.WriteLine($"{majorMinor}.{v.Height}.{v.Commit16}");
         }
     }
 }
