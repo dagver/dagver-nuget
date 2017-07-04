@@ -8,7 +8,7 @@ It works for C# projects on Windows and Linux.
 
 Current version formats:
 
-- `PackageSersion` = `FileVersion` = `{Major}.{Minor}.{Height}.{Commit16}`
+- `PackageVersion` = `FileVersion` = `{Major}.{Minor}.{Height}.{Commit16}`
 - `AssemblyVersion` = `{Major}.0.0.0`
 
 where
