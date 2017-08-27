@@ -6,13 +6,13 @@
         <description>DagVer</description>
         <authors>Sergey Shandar</authors>
         <licenseUrl>https://github.com/sergey-shandar/dagver-nuget/blob/master/LICENSE</licenseUrl>
-        <developmentDependency>true</developmentDependency>    
+        <developmentDependency>true</developmentDependency>
         <summary>Versioning for C# projects using Git Commit DAG (Directed acyclic graph).</summary>
         <projectUrl>https://github.com/sergey-shandar/dagver-nuget</projectUrl>
     </metadata>
     <files>
-        <file src="program/bin/Debug/netcoreapp1.1/program.dll" target="tools\" />
-        <file src="program/bin/Debug/netcoreapp1.1/program.runtimeconfig.json" target="tools\" />
+        <file src="program/bin/Debug/netcoreapp2/program.dll" target="tools\" />
+        <file src="program/bin/Debug/netcoreapp2/program.runtimeconfig.json" target="tools\" />
         <file src="DagVer.targets" target="build\" />
     </files>
 </package>
