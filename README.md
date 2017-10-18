@@ -2,7 +2,7 @@
 
 Versioning for Git Commit DAG (Directed acyclic graph).
 
-[![NuGet](https://img.shields.io/nuget/v/dagver.svg)](https://www.npmjs.com/package/dagver)
+[![NuGet](https://img.shields.io/nuget/v/DagVer.svg)](https://www.nuget.org/packages/DagVer/)
 
 It works for C# projects on Windows and Linux.
 
