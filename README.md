@@ -20,6 +20,17 @@ where
 
 See also [DagVer for Node.js](https://github.com/sergey-shandar/dagver) and [GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning).
 
+## Known Issues
+
+1. Add `PrivateAssets="All"` to your project file. For example,
+   ```xml
+   <PackageReference Include="DagVer" Version="0.1.0.47" PrivateAssets="All" />
+   ```
+1. The tool can't change package version for multi target projects. For example, if your project file contains
+   ```xml
+   <TargetFrameworks>netstandard1.4;net452</TargetFrameworks>
+   ```
+
 ## For Developers
 
 [![Build status](https://ci.appveyor.com/api/projects/status/q4b0u1lsdj7xt1wt?svg=true)](https://ci.appveyor.com/project/sergey-shandar/dagver-nuget)
