@@ -26,7 +26,7 @@ See also [DagVer for Node.js](https://github.com/sergey-shandar/dagver) and [Git
    ```xml
    <PackageReference Include="DagVer" Version="0.1.0.47" PrivateAssets="All" />
    ```
-1. The tool can't change package version for multi target projects. For example, if your project file contains
+1. The tool can't change a package version for multi target projects. For example, if your project file contains
    ```xml
    <TargetFrameworks>netstandard1.4;net452</TargetFrameworks>
    ```
